@@ -32,7 +32,9 @@ GR_PYTHON_INSTALL(
     FILES
     __init__.py
     rdspanel.py
-    DESTINATION ${GR_PYTHON_DIR}/rds
+    rds_const.py
+    qt_panel.py DESTINATION ${GR_PYTHON_DIR}/rds
+
 )
 
 ########################################################################
@@ -43,4 +45,3 @@ GR_PYTHON_INSTALL(
 #set(GR_TEST_TARGET_DEPS gnuradio-rds)
 #set(GR_TEST_PYTHON_DIRS ${CMAKE_BINARY_DIR}/swig)
 #GR_ADD_TEST(qa_rds ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/qa_rds.py)
-

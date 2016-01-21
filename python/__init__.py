@@ -24,3 +24,4 @@ from rds_swig import *
 # import any pure python here
 #
 from rdspanel import *
+from qt_panel import qt_panel

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<block>
+  <name>RDS QT Panel</name>
+  <key>rds_qt_panel</key>
+  <category>RDS</category>
+  <import>import rds</import>
+  <make>#set $win = 'self.%s'%$id
+$(win) = rds.qt_panel()
+$(gui_hint()($win))
+  </make>
+	<callback>set_frequency(float($frequency))</callback>
+
+  <param>
+		<name>Frequency</name>
+		<key>frequency</key>
+		<value></value>
+		<type>float</type>
+  </param>
+
+  <param>
+    <name>GUI Hint</name>
+    <key>gui_hint</key>
+    <value></value>
+    <type>gui_hint</type>
+    <hide>part</hide>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+
+  <doc>
+    This block provides a Qt based widget for the display of RDS information. \
+
+    The frequency parameter is best set to a variable that may change when a radio is tuned to a new frequency.
+
+    The GUI hint can be used to position the widget within the application. \
+    The hint is of the form [tab_id@tab_index]: [row, col, row_span, col_span]. \
+    Both the tab specification and the grid position are optional.
+  </doc>
+</block>
